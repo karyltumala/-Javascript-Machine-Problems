@@ -1,65 +1,115 @@
-body { 
-    font-family: "Segoe UI", Arial, sans-serif; 
+/* Basic page layout */
+:root{
+    --accent: #0066cc;
+    --accent-dark: #004aad;
+    --card-bg: #ffffff;
+    --page-bg: #f4f8fb;
+    --muted: #6b7280;
+    --success: #1f8a4b;
+}
+
+* { box-sizing: border-box; }
+body {
     margin: 0;
-    padding: 0;
-    background: #f0f4f8;
-    color: #333;
+    font-family: "Segoe UI", Roboto, system-ui, Arial, sans-serif;
+    background: var(--page-bg);
+    color: #111827;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
 }
 
-h1 {
+/* Header */
+header {
+    background: linear-gradient(90deg, var(--accent-dark), var(--accent));
+    color: #fff;
+    padding: 28px 16px;
     text-align: center;
-    padding: 20px 0;
-    background: #004aad;
-    color: white;
-    margin: 0 0 20px 0;
+    box-shadow: 0 6px 18px rgba(2,6,23,0.08);
+}
+header h1 { margin: 0; font-size: 1.6rem; letter-spacing: 0.2px; }
+header .subtitle { margin: 6px 0 0; opacity: 0.95; font-size: 0.95rem }
+
+/* Main container */
+main {
+    width: 92%;
+    max-width: 940px;
+    margin: 20px auto 60px;
+    padding-bottom: 16px;
 }
 
+/* Problem card */
 .problem {
-    width: 80%;
-    max-width: 700px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 18px;
+    margin: 18px 0;
+    box-shadow: 0 8px 20px rgba(15,23,42,0.06);
+    border: 1px solid rgba(15,23,42,0.04);
 }
 
 .problem h3 {
-    margin-top: 0;
-    color: #004aad;
+    margin: 0 0 10px 0;
+    color: var(--accent-dark);
+    font-size: 1.05rem;
 }
 
-input {
-    width: 95%;
-    padding: 10px;
-    margin: 6px 0;
-    border: 1px solid #aaa;
-    border-radius: 5px;
+/* Inputs and buttons */
+input[type="text"],
+input[type="email"],
+input,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
     font-size: 15px;
+    margin: 8px 0;
+    outline: none;
+    transition: box-shadow .18s, border-color .18s;
+}
+
+input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 6px 18px rgba(2,6,23,0.06);
 }
 
 button {
-    padding: 10px 15px;
-    background: #007bff;
+    display: inline-block;
+    margin-top: 8px;
+    padding: 10px 14px;
+    border-radius: 8px;
     border: none;
-    color: white;
-    font-size: 15px;
-    border-radius: 5px;
+    background: linear-gradient(180deg,var(--accent),var(--accent-dark));
+    color: #fff;
+    font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform .12s ease, box-shadow .12s ease;
 }
 
-button:hover {
-    background: #0056b3;
+button:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(2,6,23,0.08); }
+button:active { transform: translateY(0); }
+
+/* Output box */
+.output {
+    margin-top: 12px;
+    font-weight: 700;
+    color: #0b3140;
+    background: linear-gradient(180deg, rgba(223,247,237,0.9), rgba(237,252,243,0.9));
+    padding: 10px 12px;
+    border-radius: 8px;
+    border-left: 5px solid rgba(31,138,75,0.95);
 }
 
-.output { 
-    margin-top: 12px; 
-    font-weight: bold; 
-    color: #008000; 
-    background: #e9ffe9;
-    padding: 10px;
-    border-radius: 5px;
-    border-left: 4px solid #28a745;
+/* Footer */
+footer {
+    text-align: center;
+    color: var(--muted);
+    padding: 18px 8px;
+    font-size: 0.9rem;
+}
+
+/* Responsive tweaks */
+@media (min-width: 1100px){
+    main { width: 80%; }
+    .problem { padding: 22px; }
 }
