@@ -3,62 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Machine Problems - Client-Side JavaScript by Karyl Kaye Tumala</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        .problem { margin: 20px 0; padding: 15px; border: 1px solid #ccc; }
-        button { margin-top: 5px; }
-        .output { margin-top: 10px; font-weight: bold; color: #0066cc; }
-    </style>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Client-Side JavaScript Machine Problems</h1>
+    <header>
+        <h1>Client-Side JavaScript Machine Problems</h1>
+        <p class="subtitle">Interactive exercises — try the inputs and click the buttons</p>
+    </header>
 
-    <!-- Problem 1: ReplaceAll -->
-    <div class="problem">
-        <h3>Problem 1: ReplaceAll</h3>
-        <input id="input1" placeholder="Enter text with spaces" value="ba l am an">
-        <button onclick="replaceAll()">Replace All Spaces</button>
-        <div id="output1" class="output"></div>
-    </div>
+    <main>
+        <!-- Problem 1: ReplaceAll -->
+        <section class="problem">
+            <h3>Problem 1: ReplaceAll</h3>
+            <input id="input1" placeholder="Enter text with spaces" value="ba l am an">
+            <button type="button" onclick="replaceAll()">Replace All Spaces</button>
+            <div id="output1" class="output"></div>
+        </section>
 
-    <!-- Problem 2: SearchWord -->
-    <div class="problem">
-        <h3>Problem 2: SearchWord</h3>
-        <input id="sentence2" placeholder="Enter sentence" value="JavaScript is easy"><br>
-        <input id="word2" placeholder="Enter word to search" value="easy"><br>
-        <button onclick="searchWord()">Search Word</button>
-        <div id="output2" class="output"></div>
-    </div>
+        <!-- Problem 2: SearchWord -->
+        <section class="problem">
+            <h3>Problem 2: SearchWord</h3>
+            <input id="sentence2" placeholder="Enter sentence" value="JavaScript is easy"><br>
+            <input id="word2" placeholder="Enter word to search" value="easy"><br>
+            <button type="button" onclick="searchWord()">Search Word</button>
+            <div id="output2" class="output"></div>
+        </section>
 
-    <!-- Problem 3: ReplaceWord -->
-    <div class="problem">
-        <h3>Problem 3: ReplaceWord</h3>
-        <input id="sentence3" placeholder="Enter sentence" value="I love PHP"><br>
-        <input id="oldWord3" placeholder="Word to replace" value="PHP"><br>
-        <input id="newWord3" placeholder="New word" value="JavaScript"><br>
-        <button onclick="replaceWord()">Replace First Occurrence</button>
-        <div id="output3" class="output"></div>
-    </div>
+        <!-- Problem 3: ReplaceWord -->
+        <section class="problem">
+            <h3>Problem 3: ReplaceWord</h3>
+            <input id="sentence3" placeholder="Enter sentence" value="I love PHP"><br>
+            <input id="oldWord3" placeholder="Word to replace" value="PHP"><br>
+            <input id="newWord3" placeholder="New word" value="JavaScript"><br>
+            <button type="button" onclick="replaceWord()">Replace First Occurrence</button>
+            <div id="output3" class="output"></div>
+        </section>
 
-    <!-- Problem 4: CountCharacters -->
-    <div class="problem">
-        <h3>Problem 4: CountCharacters</h3>
-        <input id="input4" placeholder="Enter text" value="Hello World">
-        <button onclick="countCharacters()">Count Characters</button>
-        <div id="output4" class="output"></div>
-    </div>
+        <!-- Problem 4: CountCharacters -->
+        <section class="problem">
+            <h3>Problem 4: CountCharacters</h3>
+            <input id="input4" placeholder="Enter text" value="Hello World">
+            <button type="button" onclick="countCharacters()">Count Characters</button>
+            <div id="output4" class="output"></div>
+        </section>
 
-    <!-- Problem 5: EmailCheck -->
-    <div class="problem">
-        <h3>Problem 5: EmailCheck</h3>
-        <input id="email5" placeholder="Enter email" value="student@email.com">
-        <button onclick="checkEmail()">Validate Email</button>
-        <div id="output5" class="output"></div>
-    </div>
+        <!-- Problem 5: EmailCheck -->
+        <section class="problem">
+            <h3>Problem 5: EmailCheck</h3>
+            <input id="email5" placeholder="Enter email" value="student@email.com">
+            <button type="button" onclick="checkEmail()">Validate Email</button>
+            <div id="output5" class="output"></div>
+        </section>
+    </main>
 
-    <!-- Link to External JavaScript -->
+    <footer>
+        <small>Made by Karyl Kaye Tumala</small>
+    </footer>
+
+    <!-- Link to external JavaScript -->
     <script src="script.js"></script>
-
 </body>
 </html>
